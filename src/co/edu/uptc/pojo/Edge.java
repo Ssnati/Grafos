@@ -6,16 +6,18 @@ public class Edge {
     private double distance;
     private double speed;
     private String wayType;
+    private Direction direction;
 
     public Edge() {
     }
 
-    public Edge(Node origin, Node destine, double distance, double speed, String wayType) {
+    public Edge(Node origin, Node destine, double distance, double speed, String wayType, Direction direction) {
         this.origin = origin;
         this.destine = destine;
         this.distance = distance;
         this.speed = speed;
         this.wayType = wayType;
+        this.direction = direction;
     }
 
     public Node getOrigin() {
@@ -56,5 +58,13 @@ public class Edge {
 
     public void setWayType(String wayType) {
         this.wayType = wayType;
+    }
+
+    public Direction getDirection() {
+        return direction;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
     }
 }
