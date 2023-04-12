@@ -9,24 +9,24 @@ import java.util.List;
 import java.util.Map;
 
 public class Graph {
-    private Map<Node, List<Edge>> grafo = new HashMap<>();
+    private Map<Node, List<Edge>> graph = new HashMap<>();
 
     public void addNode(Node Node) {
-        grafo.put(Node, new ArrayList<>());
+        graph.put(Node, new ArrayList<>());
     }
 
     public void addEdge(Node origin, Node destine, double distance, double speed, String wayType) {
         Edge Edge = new Edge(origin, destine, distance, speed, wayType);
-        grafo.get(origin).add(Edge);
-        grafo.get(destine).add(Edge);
+        graph.get(origin).add(Edge);
+        graph.get(destine).add(Edge);
     }
 
     public List<Edge> getEdges(Node Node) {
-        return grafo.get(Node);
+        return graph.get(Node);
     }
 
     public List<Node> getNodes() {
-        return new ArrayList<>(grafo.keySet());
+        return new ArrayList<>(graph.keySet());
     }
 
 }
