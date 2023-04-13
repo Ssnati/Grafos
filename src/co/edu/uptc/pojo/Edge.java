@@ -3,18 +3,16 @@ package co.edu.uptc.pojo;
 public class Edge {
     private Node origin;
     private Node destine;
-    private double distance;
     private double speed;
-    private String wayType;
+    private WayType wayType;
     private Direction direction;
 
     public Edge() {
     }
 
-    public Edge(Node origin, Node destine, double distance, double speed, String wayType, Direction direction) {
+    public Edge(Node origin, Node destine, double speed, WayType wayType, Direction direction) {
         this.origin = origin;
         this.destine = destine;
-        this.distance = distance;
         this.speed = speed;
         this.wayType = wayType;
         this.direction = direction;
@@ -36,14 +34,6 @@ public class Edge {
         this.destine = destine;
     }
 
-    public double getDistance() {
-        return distance;
-    }
-
-    public void setDistance(double distance) {
-        this.distance = distance;
-    }
-
     public double getSpeed() {
         return speed;
     }
@@ -52,11 +42,11 @@ public class Edge {
         this.speed = speed;
     }
 
-    public String getWayType() {
+    public WayType getWayType() {
         return wayType;
     }
 
-    public void setWayType(String wayType) {
+    public void setWayType(WayType wayType) {
         this.wayType = wayType;
     }
 

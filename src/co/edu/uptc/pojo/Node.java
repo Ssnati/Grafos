@@ -3,16 +3,16 @@ package co.edu.uptc.pojo;
 public class Node {
     private int id;
     private String name;
-    private double latitud;
-    private double longitud;
+    private double latitude;
+    private double longitude;
 
     public Node() {
     }
     public Node(int id, String name, double latitude, double longitude) {
         this.id = id;
         this.name = name;
-        this.latitud = latitude;
-        this.longitud = longitude;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public int getId() {
@@ -31,19 +31,19 @@ public class Node {
         this.name = name;
     }
 
-    public double getLatitud() {
-        return latitud;
+    public double getLatitude() {
+        return latitude;
     }
 
-    public void setLatitud(double latitud) {
-        this.latitud = latitud;
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
     }
 
-    public double getLongitud() {
-        return longitud;
+    public double getLongitude() {
+        return longitude;
     }
 
-    public void setLongitud(double longitud) {
-        this.longitud = longitud;
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 }
