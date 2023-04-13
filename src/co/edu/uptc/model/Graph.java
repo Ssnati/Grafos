@@ -10,7 +10,15 @@ import java.util.List;
 import java.util.Map;
 
 public class Graph {
-    private Map<Node, List<Edge>> graph = new HashMap<>();
+    private Map<Node, List<Edge>> graph;
+
+    public Graph(Map<Node, List<Edge>> graph) {
+        this.graph = graph;
+    }
+
+    public Graph() {
+        graph = new HashMap<>();
+    }
 
     public void addNode(Node Node) {
         graph.put(Node, new ArrayList<>());
