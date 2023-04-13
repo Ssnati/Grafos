@@ -9,6 +9,7 @@ public class Main {
         graph.addNode(new Node(2, "Paipa", 0, 1));
         graph.addNode(new Node(3, "Duitama", 1, 0));
         graph.addNode(new Node(4, "Sogamoso", 1, 1));
+        graph.addNode(new Node(5, "Sogamoso2", 1, 1));
         for (Node node : graph.getNodes()) {
             System.out.println(toString(node));
         }
@@ -16,6 +17,16 @@ public class Main {
         graph.addEdge(graph.getNodes().get(1), graph.getNodes().get(2), 20, WayType.PAVEMENT, Direction.BIDIRECTIONAL);
         graph.addEdge(graph.getNodes().get(2), graph.getNodes().get(3), 30, WayType.PAVEMENT, Direction.ORIGIN_TO_DESTINE);
 
+        graph.removeNode(graph.getNodes().get(0));
+        System.out.println("--------------------------------------------------");
+        for (Node node : graph.getNodes()) {
+            System.out.println(toString(node));
+        }
+        graph.removeNode(graph.getNodes().get(4));
+        System.out.println("--------------------------------------------------");
+        for (Node node : graph.getNodes()) {
+            System.out.println(toString(node));
+        }
 //        toString(graph);
     }
 

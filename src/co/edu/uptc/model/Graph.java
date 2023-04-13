@@ -22,10 +22,10 @@ public class Graph {
     }
 
     public void addNode(Node node) {
-        if (validateNode(node)) graph.put(node, new ArrayList<>());
+        if (validateNodeNotExists(node)) graph.put(node, new ArrayList<>());
     }
 
-    private boolean validateNode(Node node) {
+    private boolean validateNodeNotExists(Node node) {
         for (Node Node : graph.keySet()) {
             if (Node.getId() == node.getId()) {
                 return false;
@@ -34,6 +34,9 @@ public class Graph {
         return true;
     }
 
+    public void removeNode(Node node) {
+        if (graph.get(node).isEmpty()) graph.remove(node);
+    }
     public void addEdge(Node origin, Node destine, double speed, WayType wayType, Direction direction) {
         Edge Edge = new Edge(origin, destine, speed, wayType, direction);
         graph.get(origin).add(Edge);
