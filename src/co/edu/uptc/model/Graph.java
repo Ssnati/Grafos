@@ -21,8 +21,17 @@ public class Graph {
         graph = new HashMap<>();
     }
 
-    public void addNode(Node Node) {
-        graph.put(Node, new ArrayList<>());
+    public void addNode(Node node) {
+        if (validateNode(node)) graph.put(node, new ArrayList<>());
+    }
+
+    private boolean validateNode(Node node) {
+        for (Node Node : graph.keySet()) {
+            if (Node.getId() == node.getId()) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void addEdge(Node origin, Node destine, double speed, WayType wayType, Direction direction) {
